@@ -15,8 +15,6 @@
       {% include "includes/analytics.html" %}
     {% endif %}
 
-    {% if flags.ads %}{{ macros.topAd() }}{% endif %}
-
     {% if flags.header %}
       {% include "includes/header.html" %}
     {% endif %}
@@ -44,24 +42,9 @@
             </div>
           </div>
 
-          <footer class="o-typography-footer" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-            <div class="o-grid-container">
-              <div class="o-grid-row">
-                <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
-                  <small><a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a>
-                   <span itemprop="name">The Financial Times</span> Limited {{ now() | strftime('%Y') }}. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.</small>
-                </div>
-              </div>
-            </div>
-          </footer>
-
         </div>
       </article>
     </main>
-
-    {% if flags.onwardjourney %}
-      {% include "includes/onwardjourney.html" %}
-    {% endif %}
 
     {% if flags.comments %}
       {% include "includes/comments.html" %}
